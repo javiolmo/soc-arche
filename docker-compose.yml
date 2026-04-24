@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      # Añade aquí tus variables de entorno necesarias para opencode.ts
+      # ej: NEXT_PUBLIC_APP_URL=http://localhost:3000
+    restart: always
